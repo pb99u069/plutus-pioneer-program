@@ -21,7 +21,7 @@ myContract1 = do
     void $ Contract.throwError "BOOM!"
     Contract.logInfo @String "Hello from the contract!"
 
-myTrace1 :: EmulatorTrace
+myTrace1 :: EmulatorTrace ()
 myTrace1 = void $ activateContractWallet (Wallet 1) myContract1
 
 test1 :: IO ()
